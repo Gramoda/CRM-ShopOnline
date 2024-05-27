@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRM-ShopOnline</title>
+</head>
+
+<body>
+  <h1>Добавить товар</h1>
+  <form action="https://jsonplaceholder.typicode.com/posts" method="post">
+    <fieldset>
+      <label for="name">
+        Наименование
+        <input type="text" name="name" required minlength="3" id="name">
+      </label>
+
+      <label for="category">
+        Категория
+        <input type="text" name="category" required id="category">
+      </label>
+
+      <label for="units">
+        Единицы измерения
+        <input type="text" name="units" required id="units">
+      </label>
+
+      <label for="discount">
+        Дисконт
+        <input type="checkbox" id="discount">
+      </label>
+
+      <input type="text" disabled>
+
+      <label for="description">
+        Описание
+        <textarea name="description" required id="description"></textarea>
+      </label>
+
+      <label for="count">
+        Количество
+        <input name="count" type="number" min="1" required id="count">
+      </label>
+
+      <br>
+      <label for="price">
+        Цена
+        <input name="price" type="number" min="1" required id="price">
+      </label>
+
+      <input type="file" name="file" accept="image/*">
+    </fieldset>
+
+    <button type="submit">Добавить товар</button>
+  </form>
+</body>
+
+</html>
