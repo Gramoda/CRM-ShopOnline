@@ -28,11 +28,13 @@ body {
   font-size: 12px;
   background-color: #f2f0f9;;
   color: #6e6893;
+  
 }
 
 html {
   box-sizing: border-box;
   position: relative;
+  overflow: auto;
 }
 
 * {
