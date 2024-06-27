@@ -4,56 +4,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/index.css">
+
+  <link rel="preload" href="./fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Inter-SemiBoldItalic.woff2" as="font" type="font/woff2" crossorigin>
   <title>CRM-ShopOnline</title>
 </head>
 
-<body>
-  <h1>Добавить товар</h1>
-  <form action="https://jsonplaceholder.typicode.com/posts" method="post">
-    <fieldset>
-      <label for="name">
-        Наименование
-        <input type="text" name="name" required minlength="3" id="name">
-      </label>
+<body class="page">
+  <section class="add-dialog">
 
-      <label for="category">
-        Категория
-        <input type="text" name="category" required id="category">
-      </label>
+    <button class="add-dialog__close" id="closeModal">
+     <img src="img/cross.svg" alt="">
+    </button>
 
-      <label for="units">
-        Единицы измерения
-        <input type="text" name="units" required id="units">
-      </label>
+    <h1 class="add-dialog__title">Добавить товар</h1>
+    <form class="add-form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+      <fieldset class="add-form__fieldset">
+        <label class="add-form__label" for="name">
+          Наименование
+          <input class="add-form__input" type="text" name="name" required minlength="3" id="name">
+        </label>
 
-      <label for="discount">
-        Дисконт
-        <input type="checkbox" id="discount">
-      </label>
+        <label class="add-form__label" for="category">
+          Категория
+          <input class="add-form__input" type="text" name="category" required id="category">
+        </label>
 
-      <input type="text" disabled>
+        <label class="add-form__label" for="units">
+          Единицы измерения
+          <input class="add-form__input" type="text" name="units" required id="units">
+        </label>
 
-      <label for="description">
-        Описание
-        <textarea name="description" required id="description"></textarea>
-      </label>
+        <div class="add-form__discount-wrapper">
+          <label class="add-form__label-discount" for="discount">
+            Дисконт
+          </label>
+          <div class="add-form__checkbox-wrapper">
+            <input class="add-form__checkbox" type="checkbox" id="discount">
+            <input class="add-form__input-discount-disable" type="text" disabled>
+          </div>
+        </div>
+        <label class="add-form__label" for="description">
+          Описание
+          <textarea class="add-form__textarea" name="description" required id="description"></textarea>
+        </label>
 
-      <label for="count">
-        Количество
-        <input name="count" type="number" min="1" required id="count">
-      </label>
+        <label class="add-form__label" for="count">
+          Количество
+          <input class="add-form__input" name="count" type="number" min="1" required id="count">
+        </label>
 
-      <br>
-      <label for="price">
-        Цена
-        <input name="price" type="number" min="1" required id="price">
-      </label>
+        <label class="add-form__label" for="price">
+          Цена
+          <input class="add-form__input" name="price" type="number" min="1" required id="price">
+        </label>
 
-      <input type="file" name="file" accept="image/*">
-    </fieldset>
+        <!-- <input class="add-form__file" type="file" name="file" accept="image/*"> -->
+      </fieldset>
 
-    <button type="submit">Добавить товар</button>
-  </form>
+      <button class="add-form__button" type="submit">Добавить товар</button>
+    </form>
+  </section>
 </body>
 
 </html>

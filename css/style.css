@@ -1,0 +1,57 @@
+:root {
+  position: relative;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter Bold'), local('Inter-Bold') url('../fonts/Inter-Bold.woff2');
+  font-display: swap;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter-Semi-Bold'), local('Inter Semi Bold') url('../fonts/Inter-SemiBoldItalic.woff2');
+  font-display: swap;
+  font-weight: 600;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  background-color: #f2f0f9;;
+  color: #6e6893;
+}
+
+html {
+  box-sizing: border-box;
+  position: relative;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+h1,
+h2,
+h3,
+fieldset,
+p {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
